@@ -1,4 +1,5 @@
 source 'https://rubygems.org'
+ruby "2.0.0"
 
 gem "acts_as_list", "~> 0.3.0"
 gem "acts-as-taggable-on", "~> 2.4.1"
@@ -57,13 +58,6 @@ group :doc do
   gem 'sdoc'
 end
 
-# Use ActiveModel has_secure_password
-
-# Use unicorn as the app server
-# gem 'unicorn'
-
-# Use Capistrano for deployment
-# gem 'capistrano', group: :development
-
-# Use debugger
-# gem 'debugger', group: [:development, :test]
+group :production do
+  gem "rails_12factor"
+end
