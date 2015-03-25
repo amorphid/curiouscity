@@ -49,7 +49,7 @@ group :development, :test do
   gem "launchy"
   gem "selenium-webdriver"
   gem "database_cleaner", '~> 1.2.0'
-  gem 'debugger'
+  gem "pry-byebug"
 end
 
 group :doc do
