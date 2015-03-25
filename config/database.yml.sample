@@ -1,0 +1,59 @@
+
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  pool: 5
+
+development:
+  <<: *default
+  database: curiouscity_development
+
+test:
+  <<: *default
+  database: curiouscity_test
+
+production:
+  <<: *default
+  database: curiouscity_production
+  username: sample_user
+
+
+# # SQLite version 3.x
+# #   gem install sqlite3
+# #
+# #   Ensure the SQLite 3 gem is defined in your Gemfile
+# #   gem 'sqlite3'
+# development: &default
+#   adapter: mysql2
+#   database: curiouscity_development
+#   username: root
+#   pool: 5
+#   timeout: 5000
+
+# # Warning: The database defined as "test" will be erased and
+# # re-generated from your development database when you run "rake".
+# # Do not set this db to the same as development or production.
+# test:
+#   <<: *default
+#   database: curiouscity_test
+
+
+
+# qa:
+#   <<: *default
+#   database: curiouscity_production
+#   password: wbez
+
+# uat:
+#   <<: *default
+#   username: cc
+#   database: curiouscity_production
+
+
+# # Be cautous if this file is publicly visible. Please ensure that your database is protected
+# # by any/all measures available in the environment you plan to host this application from.
+
+# production:
+#   <<: *default
+#   username: cc
+#   database: curiouscity_production
